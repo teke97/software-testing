@@ -25,6 +25,7 @@ public class TestModel {
         assertEquals(true, arthur.isOne());
         assertEquals(true, orator.isOne());
         assertEquals(false, crew.isOne());
+
     }
 
     @Test
