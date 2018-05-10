@@ -20,12 +20,12 @@ public class Person {
         }
     }
 
-    public void oratory(Person crew){
+    public void oratory(Person crew, Person arthur){
         if(this.name != Name.ORATOR)
             return;
         if(crew.name != Name.CREW)
             return;
-        crew.scream();
+        crew.scream(arthur);
     }
 
     public void scream(Person arthur){
@@ -33,8 +33,13 @@ public class Person {
             return;
         if(arthur.name != Name.ARTHUR)
             return;
+        arthur.realise();
     }
 
+    public void realise() {
+        if (this.name != Name.ARTHUR)
+            return;
+    }
 
     public boolean isOne(){
         return isOne;
