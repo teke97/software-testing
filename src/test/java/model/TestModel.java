@@ -8,9 +8,9 @@ import org.junit.Test;
  * Created by yaros on 11.05.18.
  */
 public class TestModel {
-    Person arthur;
-    Person crew;
-    Person orator;
+    private Person arthur;
+    private Person crew;
+    private Person orator;
 
 
     @Before
@@ -27,4 +27,10 @@ public class TestModel {
         assertEquals(false, crew.isOne());
     }
 
+    @Test
+    public void initParams(){
+        assertEquals(Person.State.SLIDING,arthur.getState());
+        assertEquals(Person.State.PREPARING, orator.getState());
+        assertEquals(Person.State.WAITING, crew.getState());
+    }
 }
